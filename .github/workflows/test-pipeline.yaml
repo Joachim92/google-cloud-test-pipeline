@@ -21,12 +21,13 @@ jobs:
           workload_identity_provider: 'projects/112258718112/locations/global/workloadIdentityPools/github-pool/providers/github'
           service_account: 'ogg-sa@oggh-440221.iam.gserviceaccount.com'
 
-      # - name: install-gcloud
-      #   uses: google-cloud-github-actions/setup-gcloud@v1
-
-      - name: Run BigQuery Query
+      - name: 'check gcloud is usable'
         run: |
-          bq query --use_legacy_sql=false 'SELECT CURRENT_DATE() AS today;'
+          gcloud --help
+
+      # - name: Run BigQuery Query
+      #   run: |
+      #     bq query --use_legacy_sql=false 'SELECT CURRENT_DATE() AS today;'
 
       # - name: Print message every second for 10 seconds
       #   run: |
