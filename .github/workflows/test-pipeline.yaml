@@ -20,3 +20,10 @@ jobs:
           create_credentials_file: true
           workload_identity_provider: 'projects/112258718112/locations/global/workloadIdentityPools/github-pool/providers/github'
           service_account: 'ogg-sa@oggh-440221.iam.gserviceaccount.com'
+
+      - name: Print message every second for 10 seconds
+        run: |
+          for i in {1..10}; do
+            echo "This is message $i"
+            sleep 1
+          done
