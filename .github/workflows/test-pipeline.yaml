@@ -23,7 +23,7 @@ jobs:
 
       - name: 'check gcloud is usable'
         run: |
-          gcloud --help
+          bq query --use_legacy_sql=false 'select * from public.employees limit 10;'
 
       # - name: Run BigQuery Query
       #   run: |
