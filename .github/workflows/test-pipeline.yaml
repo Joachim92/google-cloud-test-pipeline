@@ -5,8 +5,8 @@ jobs:
   build:
     # Allow the job to fetch a GitHub ID token
     permissions:
-      id-token: write
-      contents: read
+      id-token: 'write'
+      contents: 'read'
 
     runs-on: ubuntu-latest
 
@@ -22,8 +22,12 @@ jobs:
           service_account: 'ogg-sa@oggh-440221.iam.gserviceaccount.com'
           access_token_lifetime: '300s'
 
-      - name: 'Install Google Cloud SDK'
-        uses: 'google-github-actions/setup-gcloud@v1'
+      # - name: 'Install Google Cloud SDK'
+      #   uses: 'google-github-actions/setup-gcloud@v1'
+
+      - name: ''
+        run: |
+          gcloud auth login --login-config"$GOOGLE_APPLICATION_CREDENTIALS"
 
       - name: 'Run BigQuery SQL Query'
         run: |
