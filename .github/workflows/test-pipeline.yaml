@@ -27,7 +27,7 @@ jobs:
 
       - name: ''
         run: |
-          gcloud auth login --login-config"$GOOGLE_APPLICATION_CREDENTIALS"
+          gcloud auth login --login-config="$GOOGLE_APPLICATION_CREDENTIALS"
 
       - name: 'Run BigQuery SQL Query'
         run: |
