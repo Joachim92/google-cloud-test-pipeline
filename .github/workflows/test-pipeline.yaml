@@ -31,9 +31,9 @@ jobs:
       #   run: |
       #     gcloud auth login --cred-file="$GOOGLE_APPLICATION_CREDENTIALS"
 
-      - name: 'set account'
-        run: |
-          gcloud config set account oggh-440221
+      # - name: 'set account'
+      #   run: |
+      #     gcloud config set account oggh-440221
 
       - name: 'Run BigQuery SQL Query'
         run: |
