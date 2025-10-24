@@ -21,8 +21,8 @@ jobs:
           workload_identity_provider: 'projects/112258718112/locations/global/workloadIdentityPools/github-pool/providers/github'
           service_account: 'ogg-sa@oggh-440221.iam.gserviceaccount.com'
           access_token_lifetime: '300s'
-          token_format: 'access_token'
-          export_environment_variables: true
+          # token_format: 'access_token'
+          # export_environment_variables: true
 
       # - name: 'Install Google Cloud SDK'
       #   uses: 'google-github-actions/setup-gcloud@v1'
