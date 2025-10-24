@@ -27,9 +27,13 @@ jobs:
       # - name: 'Install Google Cloud SDK'
       #   uses: 'google-github-actions/setup-gcloud@v1'
 
-      - name: ''
+      # - name: 'reauth'
+      #   run: |
+      #     gcloud auth login --cred-file="$GOOGLE_APPLICATION_CREDENTIALS"
+
+      - name: 'set account'
         run: |
-          gcloud auth login --cred-file="$GOOGLE_APPLICATION_CREDENTIALS"
+          gcloud config set account oggh-440221
 
       - name: 'Run BigQuery SQL Query'
         run: |
